@@ -79,15 +79,13 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="github" target="_blank" href="/Blunc233" title="github"><i class="icon-github"></i></a>
+					<a class="github" target="_blank" href="https://github.com/Blunc233" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="qq" target="_blank" href="/1677284481" title="qq"><i class="icon-qq"></i></a>
+					<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=16772844814&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 		        
 					<a class="weixin" target="_blank" href="/DL_Blunc" title="weixin"><i class="icon-weixin"></i></a>
+		        
+					<a class="bilibili" target="_blank" href="https://space.bilibili.com/8422105" title="bilibili"><i class="icon-bilibili"></i></a>
 		        
 					<a class="mail" target="_blank" href="mailto:blunc233@gmail.com" title="mail"><i class="icon-mail"></i></a>
 		        
@@ -124,15 +122,13 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="/Blunc233" title="github"><i class="icon-github"></i></a>
+						<a class="github" target="_blank" href="https://github.com/Blunc233" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="qq" target="_blank" href="/1677284481" title="qq"><i class="icon-qq"></i></a>
+						<a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=16772844814&site=qq&menu=yes" title="qq"><i class="icon-qq"></i></a>
 			        
 						<a class="weixin" target="_blank" href="/DL_Blunc" title="weixin"><i class="icon-weixin"></i></a>
+			        
+						<a class="bilibili" target="_blank" href="https://space.bilibili.com/8422105" title="bilibili"><i class="icon-bilibili"></i></a>
 			        
 						<a class="mail" target="_blank" href="mailto:blunc233@gmail.com" title="mail"><i class="icon-mail"></i></a>
 			        
@@ -162,27 +158,63 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-ALL-START-HERE" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-hexo的部署" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/08/23/ALL-START-HERE/">ALL START HERE</a>
+      <a class="article-title" href="/2023/08/23/hexo%E7%9A%84%E9%83%A8%E7%BD%B2/">hexo的部署</a>
     </h1>
   
 
         
-        <a href="/2023/08/23/ALL-START-HERE/" class="archive-article-date">
-  	<time datetime="2023-08-23T09:47:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-23</time>
+        <a href="/2023/08/23/hexo%E7%9A%84%E9%83%A8%E7%BD%B2/" class="archive-article-date">
+  	<time datetime="2023-08-23T11:57:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-08-23</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h1><h2 id="nodejs"><a href="#nodejs" class="headerlink" title="nodejs"></a>nodejs</h2><p>跳转<a target="_blank" rel="noopener" href="https://nodejs.org/">https://nodejs.org/</a><br>下载并安装LTS版（长期维护版）Node.js</p>
+<p>linux环境下部署</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /home/username      // 其中 username 请替换成您的用户名</span><br><span class="line">mkdir node                // 先创建一个目录</span><br><span class="line">tar -vxf /home/username/Downloads/node-v18.17.1-linux-x64.tar.xz -C /home/username/node        // 前面是下载的nodejs文件路径, -C 后是目标路径</span><br></pre></td></tr></table></figure>
+
+<p>导出环境变量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /home/username/.bashrc</span><br></pre></td></tr></table></figure>
+<p>按i进入编辑模式在底部输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/home/username/node/node-v18.17.1-linux-x64/bin</span><br></pre></td></tr></table></figure>
+<p>esc后输入:wq进行保存<br>刷新.bashrc文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /home/username/.bashrc</span><br></pre></td></tr></table></figure>
+<p>安装完成后查看node及npm版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node --version</span><br><span class="line">npm --version</span><br></pre></td></tr></table></figure>
+
+<h2 id="hexo框架的安装与配置"><a href="#hexo框架的安装与配置" class="headerlink" title="hexo框架的安装与配置"></a>hexo框架的安装与配置</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>安装完成后查看hexo版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+<h1 id="hexo的使用及github远程部署"><a href="#hexo的使用及github远程部署" class="headerlink" title="hexo的使用及github远程部署"></a>hexo的使用及github远程部署</h1><h2 id="hexo本地化简单使用"><a href="#hexo本地化简单使用" class="headerlink" title="hexo本地化简单使用"></a>hexo本地化简单使用</h2><p>mkdir一个blog文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/blog/</span><br><span class="line">hexo init //在此目录下初始化hexo blog</span><br></pre></td></tr></table></figure>
+
+<p>本地启动hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s //默认地址为http://localhost:4000</span><br></pre></td></tr></table></figure>
+
+<p>创建新文章</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &quot;title&quot; //生成source/_posts/title.md文件</span><br></pre></td></tr></table></figure>
+
+<p>清理及生成文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g</span><br></pre></td></tr></table></figure>
+
+<h2 id="github远程部署hexo"><a href="#github远程部署hexo" class="headerlink" title="github远程部署hexo"></a>github远程部署hexo</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git //安装hexo-deployer-git推送blog</span><br></pre></td></tr></table></figure>
+
+<p>配置_config.yml中deploy相关内容</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy: </span><br><span class="line">  tpye: git</span><br><span class="line">  repo:  //github仓库地址</span><br><span class="line">  branch: main //github仓库分支</span><br></pre></td></tr></table></figure>
+<p>推送指令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d //实现远端推送</span><br></pre></td></tr></table></figure>
+
+
+
       
 
       
@@ -194,7 +226,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2023/08/23/ALL-START-HERE/">展开全文 >></a>
+          <a class="article-more-a" href="/2023/08/23/hexo%E7%9A%84%E9%83%A8%E7%BD%B2/">展开全文 >></a>
         </p>
       
 
